@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const moment = require("moment");
+// const moment = require("moment");
 
 const employeeSchema = new mongoose.Schema({
   name: {
@@ -33,10 +33,10 @@ const employeeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  createDate: {
-    type: String,
-    default: () => moment().format('DD-MM-YYYY'),
-  },
+  // createDate: {
+  //   type: String,
+  //   default: () => moment().format('DD-MM-YYYY'),
+  // },
 });
 
 const Employee = mongoose.model("Employee", employeeSchema);
